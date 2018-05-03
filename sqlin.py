@@ -19,7 +19,7 @@ dork_list=['php?id=1','php?id=2','php?id=5','php?id=1 india','php?id=3 hotel','p
 option=raw_input('Provide custom list(c) or use above dork(a):')
 if option =="c":
   query=raw_input('Enter your custom dork:')
-elif:
+elif option =="a":
   value=int(raw_input('Enter respective dork number from above:'))
   query=dork_list[value-1]
 
