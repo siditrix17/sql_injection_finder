@@ -46,13 +46,17 @@ for k in range(0,19):
     response = urllib2.urlopen(lis[k]+"'")
  except urllib2.HTTPError, e:
     print'HTTPError = ' + str(e.code)
+    continue
  except urllib2.URLError, e:
     print'URLError = ' + str(e.reason)
+    continue
  except httplib.HTTPException, e:
     print'HTTPException'
+    continue
  except Exception:
     import traceback
     print 'generic exception: ' + traceback.format_exc()
+    continue
  page_source = response.read()
  if "error"or"SQL syntax"or "MYSQL" in page_source:
      print"----------------*****************************----------------"
