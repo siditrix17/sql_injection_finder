@@ -28,9 +28,9 @@ elif option.lower() =="a":
 else:
   print'Bad input!! quiting-'
   exit()
-
+num_sites=input("enter number of websites to search:")
 print'indexing all websites with specified dorks"'
-for url in search(query, tld='es', lang='es', stop=20):
+for url in search(query, tld='es', lang='es', stop=int(num_sites)):
      time.sleep(2)
      print(url)
      lis.append(url)
@@ -62,8 +62,8 @@ for k in range(0,19):
      print"----------------*****************************----------------"
      print "SQL InJECtable!!!"
      print '___ _____________'
-     #f=open('sites.txt','w')
-     #f.write(lis[k])
+     f=open('sites.txt','w')
+     f.write(lis[k])
  else:
       print "Not vulnerable.."
 
